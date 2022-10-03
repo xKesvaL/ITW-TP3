@@ -1,6 +1,30 @@
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 1vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: crimson;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: rgb(139, 13, 38);
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+}
+
+.preload * {
+  transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  -moz-transition: none !important;
+  -webkit-transition: none !important;
 }
 
 a {
@@ -26,6 +50,15 @@ a {
   display: flex;
   align-items: center;
   gap: 1vw;
+  padding: 0vh 1vw;
+  border-radius: 25px;
+  transition-property: background-color, color;
+  transition: 0.75s ease;
+}
+
+.trademark:hover {
+  background-color: white;
+  color: crimson;
 }
 
 .trademark h1 {
@@ -46,8 +79,42 @@ a {
   font-weight: 500;
 }
 
+.page {
+  padding: 0.5vh 1vw;
+  border-radius: 25px;
+  transition-property: background-color, color;
+  transition: 0.75s ease;
+}
+
+.page:hover {
+  background: white;
+  color: crimson;
+}
+
 .buying {
   display: flex;
   align-items: center;
   gap: 2vw;
+}
+
+.buy,
+.cart {
+  transition: background-color 0.75s ease;
+  padding: 2vh 1vw;
+  border-radius: 25px;
+}
+
+.buy:hover,
+.cart:hover {
+  background-color: white;
+}
+
+.buy:hover .buySvg {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(94%) saturate(7475%)
+    hue-rotate(357deg) brightness(110%) contrast(111%);
+}
+
+.cart:hover .cartSvg {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(94%) saturate(7475%)
+    hue-rotate(357deg) brightness(110%) contrast(111%);
 }

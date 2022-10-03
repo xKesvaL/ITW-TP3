@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="shortcut icon" href="img/mario-min.png" type="image/x-icon" />
   </head>
-  <body>
+  <body class="preload" onload="load()">
     <div class="main">
       <!-- ------ -->
       <!-- Header -->
@@ -42,6 +42,7 @@
         <div class="buying">
           <a href="#" class="cart">
             <svg
+              class="cartSvg"
               xmlns="http://www.w3.org/2000/svg"
               width="41"
               height="41"
@@ -61,6 +62,7 @@
           </a>
           <a href="#" class="buy"
             ><svg
+              class="buySvg"
               xmlns="http://www.w3.org/2000/svg"
               width="41"
               height="41"
@@ -85,6 +87,10 @@
       <!-- Footer -->
       <!-- ------ -->
       <div class="footer"></div>
+      <!-- -- -->
+      <!-- JS -->
+      <!-- -- -->
+      <script src="js/script.js"></script>
     </div>
   </body>
 </html>
