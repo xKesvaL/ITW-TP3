@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  min-height: 15vh;
+  background-color: crimson;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header > * {
+  margin: 0 2vw;
+}
+
+.trademark {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.trademark h1 {
+  font-weight: 700;
+}
+
+.logo {
+  max-height: 12.5vh;
+}
+
+.pages {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+}
+
+.page h2 {
+  font-weight: 500;
+}
+
+.buying {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
