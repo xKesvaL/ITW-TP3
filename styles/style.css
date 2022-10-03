@@ -32,6 +32,10 @@ a {
   color: inherit;
 }
 
+/* ====== */
+/* Header */
+/* ====== */
+
 .header {
   min-height: 15vh;
   background-color: crimson;
@@ -117,4 +121,31 @@ a {
 .cart:hover .cartSvg {
   filter: brightness(0) saturate(100%) invert(14%) sepia(94%) saturate(7475%)
     hue-rotate(357deg) brightness(110%) contrast(111%);
+}
+
+/* ======= */
+/* Content */
+/* ======= */
+
+.content {
+  margin: 0 7.5vw;
+  padding: 7.5vh 0;
+  background: #f5eeee;
+}
+
+.container {
+  margin: 0 2.5vw;
+}
+
+.container.home {
+  display: flex;
+  justify-content: space-between;
+}
+
+.homeTxt {
+  max-width: 30vw;
+}
+
+.homeImg > img {
+  max-width: 30vw;
 }
