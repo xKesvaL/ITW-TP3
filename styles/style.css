@@ -102,14 +102,16 @@ a {
 }
 
 .buy,
-.cart {
+.cart,
+.burger {
   transition: background-color 0.75s ease;
   padding: 2vh 1vw;
   border-radius: 25px;
 }
 
 .buy:hover,
-.cart:hover {
+.cart:hover,
+.burger:hover {
   background-color: white;
 }
 
@@ -121,6 +123,15 @@ a {
 .cart:hover .cartSvg {
   filter: brightness(0) saturate(100%) invert(14%) sepia(94%) saturate(7475%)
     hue-rotate(357deg) brightness(110%) contrast(111%);
+}
+
+.burger:hover .burgerSvg {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(94%) saturate(7475%)
+    hue-rotate(357deg) brightness(110%) contrast(111%);
+}
+
+.burger {
+  display: none;
 }
 
 /* ======= */
@@ -143,9 +154,58 @@ a {
 }
 
 .homeTxt {
+  max-width: 50vw;
+  text-align: right;
+}
+
+.homeTxt h2 {
+  font-size: 2.5em;
+  color: crimson;
+}
+
+.homeImg,
+.homeImg > img {
   max-width: 30vw;
 }
 
-.homeImg > img {
-  max-width: 30vw;
+/* ============= */
+/* Media Queries */
+/* ============= */
+
+@media screen and (max-width: 800px) {
+  /* Header */
+
+  .pages,
+  .buying {
+    display: none;
+  }
+
+  .burger {
+    display: initial;
+  }
+
+  /* Content */
+
+  .content {
+    padding: 5vh 0;
+  }
+
+  .homeTxt {
+    max-width: 80vw;
+  }
+
+  .homeTxt h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* Content */
+  .homeImg {
+    display: none;
+  }
+
+  .homeTxt h2 {
+    margin: 0;
+  }
 }
