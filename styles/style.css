@@ -32,6 +32,40 @@ a {
   color: inherit;
 }
 
+/* ============ */
+/* Progress Bar */
+/* ============ */
+
+#progress {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.95);
+  transition: 1s 0.4s;
+}
+
+#progressBar {
+  position: absolute;
+  top: 50%;
+  height: 0.5vh;
+  width: 0; /* We'll change that in JS */
+  background: white;
+  transition: 1s ease;
+}
+
+#progressStat {
+  font-size: 1.4em;
+  letter-spacing: 3px;
+  position: absolute;
+  top: 45%;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+
 /* ====== */
 /* Header */
 /* ====== */

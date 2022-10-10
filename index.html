@@ -19,6 +19,14 @@
     <link rel="shortcut icon" href="img/mario-min.png" type="image/x-icon" />
   </head>
   <body class="preload" onload="load()">
+    <!-- ------------ -->
+    <!-- Progress Bar -->
+    <!-- ------------ -->
+    <div id="progress">
+      <div id="progressStat">Chargement 0%</div>
+      <div id="progressBar"></div>
+    </div>
+
     <div class="main">
       <!-- ------ -->
       <!-- Header -->
@@ -113,7 +121,7 @@
               Copain Gay, louable et livré chez vous en 24H, il deviendra votre
               petit copain le temps d'une location ;)
             </p>
-            <a href="#" class="rent">Louez-le !</a>
+            <a href="#" class="rent" onclick="rent()">Louez-le !</a>
           </div>
         </div>
       </div>
