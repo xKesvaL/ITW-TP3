@@ -155,17 +155,46 @@ a {
 
 .homeTxt {
   max-width: 50vw;
-  text-align: right;
+  background-color: white;
+  padding: 2vw;
+  margin: 0 2vw;
+  border-radius: 25px;
+  border: 0.1px solid lightgrey;
+  display: flex;
+  flex-direction: column;
 }
 
 .homeTxt h2 {
-  font-size: 2.5em;
+  font-size: 3.5em;
   color: crimson;
+  margin: 2vh 1vw;
+}
+
+.homeTxt h3 {
+  text-align: right;
+  margin: 2vh 1vw;
+  font-weight: lighter;
+  font-size: 3em;
+}
+
+.homeDesc {
+  margin: 2vh 2vw;
+  font-size: 2em;
 }
 
 .homeImg,
 .homeImg > img {
   max-width: 30vw;
+}
+
+.rent {
+  background-color: crimson;
+  color: white;
+  font-size: 3em;
+  padding: 4vh 4vw;
+  margin: 4vh 1vw;
+  text-align: center;
+  border-radius: 25px;
 }
 
 /* ============= */
@@ -207,5 +236,9 @@ a {
 
   .homeTxt h2 {
     margin: 0;
+  }
+
+  .container.home {
+    justify-content: center;
   }
 }
