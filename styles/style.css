@@ -70,6 +70,10 @@ a {
 /* Header */
 /* ====== */
 
+.burgerMenu {
+  display: none;
+}
+
 .header {
   min-height: 15vh;
   background-color: crimson;
@@ -259,6 +263,22 @@ a {
 
   .homeTxt h2 {
     font-size: 2.5em;
+  }
+
+  .header {
+    overflow: hidden;
+  }
+
+  .burgerMenu {
+    display: initial;
+    position: fixed;
+    left: 100%;
+    top: 0;
+    background: crimson;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    transition: 1s all;
   }
 }
 

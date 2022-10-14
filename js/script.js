@@ -42,3 +42,11 @@ function loadBar() {
 }
 
 document.addEventListener("DOMContentLoaded", loadBar);
+let burgerBtn = document.querySelector(".burger");
+let burgerMenu = document.querySelector(".burgerMenu");
+
+burgerBtn.onclick = showBurgerMenu;
+
+function showBurgerMenu() {
+  burgerMenu.style.left = "-2%";
+}
