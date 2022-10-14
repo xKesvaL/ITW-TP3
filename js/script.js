@@ -2,10 +2,6 @@ function id(i) {
   return document.getElementById(i);
 }
 
-function load() {
-  document.querySelector("body").classList.remove("preload");
-}
-
 function loadBar() {
   const data = {
     progress: id("progress"),
@@ -13,8 +9,8 @@ function loadBar() {
     progressStat: id("progressStat"),
     images: document.images,
     cur: 0,
-    tot: document.images.length,
     perc: 0,
+    tot: document.images.length,
   };
 
   function imgLoad() {
@@ -33,6 +29,8 @@ function loadBar() {
     tImg.src = data.images[i].src;
   }
 
+  copyBurgerMenu();
+
   function pageLoad() {
     data.progress.style.opacity = 0;
     setTimeout(function () {
@@ -41,12 +39,29 @@ function loadBar() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", loadBar);
-let burgerBtn = document.querySelector(".burger");
-let burgerMenu = document.querySelector(".burgerMenu");
-
-burgerBtn.onclick = showBurgerMenu;
-
 function showBurgerMenu() {
-  burgerMenu.style.left = "-2%";
+  burgerData.menu.style.left = "-2%";
 }
+
+function closeBurgerMenu() {
+  burgerData.menu.style.left = "100%";
+}
+
+function copyBurgerMenu() {
+  burgerData.menu.innerHTML =
+    `<div class="">` +
+    burgerData.pages.outerHTML.replace("pages", "burgerPages") +
+    burgerData.buying.outerHTML.replace("buying", "burgerBuying") +
+    `</div>` +
+    burgerData.menu.innerHTML;
+}
+
+document.addEventListener("DOMContentLoaded", loadBar);
+
+let burgerData = {
+  btn: document.querySelector(".burger"),
+  menu: document.querySelector(".burgerMenu"),
+  close: document.querySelector(".burgerCloseMenu"),
+  pages: document.querySelector(".pages"),
+  buying: document.querySelector(".buying"),
+};

@@ -53,7 +53,7 @@ a {
   height: 0.5vh;
   width: 0; /* We'll change that in JS */
   background: white;
-  transition: 1s ease;
+  transition: 1s ease-in-out;
 }
 
 #progressStat {
@@ -72,6 +72,11 @@ a {
 
 .burgerMenu {
   display: none;
+}
+
+.burgerCloseMenu {
+  margin: 2vh 2vw auto auto;
+  cursor: pointer;
 }
 
 .header {
@@ -95,7 +100,8 @@ a {
   padding: 0vh 1vw;
   border-radius: 25px;
   transition-property: background-color, color;
-  transition: 0.75s ease;
+  transition: 0.75s ease-in-out;
+  z-index: 10;
 }
 
 .trademark:hover {
@@ -117,18 +123,18 @@ a {
   align-items: center;
 }
 
-.page h2 {
+.pages.page h2 {
   font-weight: 500;
 }
 
-.page {
+.pages.page {
   padding: 0.5vh 1vw;
   border-radius: 25px;
   transition-property: background-color, color;
-  transition: 0.75s ease;
+  transition: 0.75s ease-in-out;
 }
 
-.page:hover {
+.pages.page:hover {
   background: white;
   color: crimson;
 }
@@ -141,35 +147,51 @@ a {
 
 .buy,
 .cart,
-.burger {
-  transition: background-color 0.75s ease;
-  padding: 2vh 1vw;
+.burger,
+.burgerCloseMenu {
+  transition: background-color 0.75s ease-in-out;
+  padding: 2vh 2vw;
   border-radius: 25px;
+}
+
+.buySvg,
+.cartSvg,
+.burgerSvg,
+.burgerCloseMenuSvg {
+  transition: stroke 0.75s ease-in-out;
+  fill: none;
+  stroke-width: 2;
+  stroke: #ffffff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .buy:hover,
 .cart:hover,
-.burger:hover {
+.burger:hover,
+.burgerCloseMenu:hover {
   background-color: white;
 }
 
 .buy:hover .buySvg {
-  filter: brightness(0) saturate(100%) invert(14%) sepia(94%) saturate(7475%)
-    hue-rotate(357deg) brightness(110%) contrast(111%);
+  stroke: #dc143c;
 }
 
 .cart:hover .cartSvg {
-  filter: brightness(0) saturate(100%) invert(14%) sepia(94%) saturate(7475%)
-    hue-rotate(357deg) brightness(110%) contrast(111%);
+  stroke: #dc143c;
 }
 
 .burger:hover .burgerSvg {
-  filter: brightness(0) saturate(100%) invert(14%) sepia(94%) saturate(7475%)
-    hue-rotate(357deg) brightness(110%) contrast(111%);
+  stroke: #dc143c;
+}
+
+.burgerCloseMenu:hover .burgerCloseMenuSvg {
+  stroke: #dc143c;
 }
 
 .burger {
   display: none;
+  cursor: pointer;
 }
 
 /* ======= */
@@ -270,7 +292,7 @@ a {
   }
 
   .burgerMenu {
-    display: initial;
+    display: flex;
     position: fixed;
     left: 100%;
     top: 0;
@@ -278,7 +300,7 @@ a {
     min-width: 100vw;
     min-height: 100vh;
     overflow: hidden;
-    transition: 1s all;
+    transition: 1s all ease-in-out;
   }
 }
 

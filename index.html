@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="shortcut icon" href="img/mario-min.png" type="image/x-icon" />
   </head>
-  <body class="preload" onload="load()">
+  <body>
     <!-- ------------ -->
     <!-- Progress Bar -->
     <!-- ------------ -->
@@ -34,7 +34,12 @@
       <!-- ------ -->
       <div class="header">
         <a href="#" class="trademark">
-          <img src="img/mario-min.png" alt="" class="logo" />
+          <img
+            src="img/mario-min.png"
+            alt=""
+            class="logo"
+            style="min-width: 40px"
+          />
           <h1>Mario CPG</h1>
         </a>
         <div class="pages">
@@ -56,11 +61,6 @@
               width="41"
               height="41"
               viewBox="0 0 24 24"
-              fill="none"
-              stroke="#FFFFFF"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
             >
               <circle cx="10" cy="20.5" r="1" />
               <circle cx="18" cy="20.5" r="1" />
@@ -87,7 +87,7 @@
             </svg>
           </a>
         </div>
-        <div class="burger">
+        <div class="burger" onclick="showBurgerMenu()">
           <svg
             class="burgerSvg"
             xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +105,25 @@
             <line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
         </div>
-        <div class="burgerMenu"></div>
+        <div class="burgerMenu">
+          <div class="burgerCloseMenu" onclick="closeBurgerMenu()">
+            <svg
+              class="burgerCloseMenuSvg"
+              xmlns="http://www.w3.org/2000/svg"
+              width="41"
+              height="41"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </div>
+        </div>
       </div>
       <!-- ------- -->
       <!-- Content -->
@@ -113,7 +131,7 @@
       <div class="content">
         <div class="container home">
           <div class="homeImg">
-            <img src="img/mario-min.png" alt="" />
+            <img src="img/mario-min.png" alt="" style="min-width: 100px" />
           </div>
           <div class="homeTxt">
             <h2>Mario, copain gay?!</h2>
